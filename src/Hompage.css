@@ -296,3 +296,81 @@ hr{
     margin-top: -150px;
     margin-left: 70px;
 }
+
+@media screen and (max-width: 768px) {
+    .navbaritems {
+        flex-direction: column;
+        padding-right: 10px;
+        gap: 10px;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .homematter {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .homepic {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .aboutme .aboutmatter {
+        padding: 0 5%;
+    }
+
+    .experience .interns {
+        padding-left: 20px;
+    }
+
+    .projects .imgcontainer {
+        width: 100%;
+    }
+
+    .contact .phonecall, .contact .email, .contact .location {
+        padding-left: 10px;
+    }
+
+    .social {
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbaritems {
+        gap: 5px;
+    }
+
+    .home b {
+        font-size: 36px;
+    }
+
+    .homematter p {
+        font-size: 18px;
+    }
+
+    .homeimage {
+        height: auto;
+    }
+
+    .aboutmatter {
+        font-size: medium;
+    }
+
+    .projects .imgcontainer {
+        max-width: 100%;
+    }
+
+    .projects .probutton {
+        width: 80px;
+        font-size: 14px;
+    }
+
+    .carousel img {
+        height: auto;
+    }
+}
