@@ -1,0 +1,298 @@
+.totalbg{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    height: 55px;
+    padding-left: 20px;
+    margin-right: 20px;
+    background-color: #39FF14;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+.navbaritems{
+    display: flex;
+    font-size: large;
+    padding-right: 50px;
+    
+}
+.navbaritems p{
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.navbaritems p:hover{
+    transform: scale(1.2);
+}
+.home{
+    margin-top: 55px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.homematter{
+    width: 65%;
+    margin: 10px;
+    color: #39FF14;
+}
+.homematter b{
+    float: right;
+    padding-right: 30px;
+    padding-top: 230px;
+    font-size: 50px;
+    font-family:cursive;
+}
+.homematter p{
+    padding-top: 10px;
+    padding-left: 120px;
+    padding-right: 30px;
+    float: right;
+    font-size: 20px;
+    font-family:cursive;
+}
+.homepic{
+    width: 35%;
+    margin: 10px;
+    color: #39FF14;
+}
+.homeimage{
+    width: 90%;
+    padding-top: 40px;
+    height: 480px;
+    border-radius: 10px;
+}
+.homepic img{
+    transition: transform 0.3s ease;
+}
+.homepic img:hover{
+    transform: scale(1.1);
+}
+.aboutme{
+    padding-top: 55px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: auto;
+}
+hr{
+    margin-top: 25px;
+    border: 1px #39FF14 solid;
+}
+.aboutme h1{
+    color: #39FF14;
+    text-align: center;
+    padding-top: 20px;
+    font-family: cursive;
+    box-sizing: border-box;
+}
+.aboutmatter{
+    color: #39FF14;
+    padding-top: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: larger;
+    font-family: cursive;
+}
+.aboutme h2{
+    color: #39FF14;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 30px;
+    font-weight: 200;
+    transition: transform 0.3s ease;
+}
+.aboutme h2:hover{
+    transform: scale(1.1);
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+.aboutme h4{
+    color: #39FF14;
+    padding-top: 50px;
+    font-family: cursive;
+    justify-content: center;
+    display: flex;
+}
+.skill{
+  color: black !important; 
+  border-radius: 5px;
+  background: #39FF14;
+  font-size: 15px !important;
+  padding: 5px;
+  margin-left: 10px;
+}
+.experience{
+    padding-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 170px;
+}
+.experience h3{
+    color: #39FF14;
+    font-family: cursive;
+    padding-left: 30px;
+}
+.interns{
+    color: #39FF14;
+    padding-left: 100px;
+    font-family: cursive;
+    font-size: 17px;
+    list-style-type: square;
+}
+.projects {
+    height: 420px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 55px !important;
+}
+
+.projects h3 {
+    color: #39FF14;
+    font-family: cursive;
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+
+.imgcontainer {
+    position: relative;
+    width: 300px;  
+    margin-left: 100px; 
+    height: 290px;
+    box-shadow: 2px 2px 4px#39FF14;
+    border-radius: 10px;    
+}
+.votingimg {
+    width: 100%;  
+    height: 200px;
+    opacity: 1;
+    display: block;
+    transition: opacity .5s ease;
+}
+
+.middle {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.imgcontainer:hover .votingimg {
+    opacity: 0.3;
+}
+
+.imgcontainer:hover .middle {
+    opacity: 1;
+}
+
+.probutton {
+    background-color: #39FF14;
+    font-size: 16px;
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.probutton a{
+    text-decoration: none;
+    color: black;
+}
+
+.probutton:hover {
+    transform: scale(1.1);
+}
+
+.imgcontainer p{
+    color: #39FF14;
+    font-family: cursive;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 17px;
+}
+.gallery {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #39FF14;
+    height: auto;
+    padding-top: 55px; 
+}
+
+.gallery h3 {
+    font-family: cursive;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+
+.carousel {
+    max-width: 600px;
+    max-height: 350px; 
+    margin: 0 auto; 
+    border-radius: 10px;
+    box-shadow: 5px 5px 13px #39FF14; 
+}
+
+.carousel img {
+    width: 100%; 
+    height: 350px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+.contact {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+}
+
+.contact h3 {
+    color: #39FF14;
+    font-family: cursive;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.phonecall, .email, .location {
+    display: flex;
+    align-items: center; 
+    margin-top: 15px;
+    padding-left: 50px;
+}
+
+.loca, .phone, .emai {
+    width: 30px;
+    height: 30px;
+    box-shadow: 2px 2px 8px #39FF14; /* Adds shadow to icons */
+    margin-right: 10px; /* Adds spacing between icon and text */
+    transition: box-shadow 0.3s ease;
+    border-radius: 3px;
+}
+
+.loca:hover, .phone:hover, .emai:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7); /* Darker shadow on hover */
+}
+
+.con, .cont {
+    color: #39FF14;
+    font-family: cursive;
+    margin: 0;
+    padding-left: 10px;
+}
+.social{
+    color: #39FF14;
+    margin-top: -150px;
+    margin-left: 70px;
+}
