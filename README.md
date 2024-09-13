@@ -20,4 +20,4 @@ Welcome to my portfolio! This is a personal website showcasing my skills, projec
 
 ## Live Portfolio
 
-You can check out my live portfolio here: [My Portfolio](https://my-portfolio.vercel.app)
+You can check out my live portfolio here: [My Portfolio](https://haneesh-portfolio.vercel.app)
