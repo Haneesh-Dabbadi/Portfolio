@@ -17,3 +17,7 @@ Welcome to my portfolio! This is a personal website showcasing my skills, projec
 - **Bootstrap**: For styling and responsive design.
 - **React-Bootstrap**: For using Bootstrap components with React.
 - **CSS**: Custom styles for additional design needs.
+
+## Live Portfolio
+
+You can check out my live portfolio here: [My Portfolio](https://my-portfolio.vercel.app)
