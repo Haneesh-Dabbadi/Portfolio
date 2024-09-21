@@ -126,6 +126,24 @@ function Homepage() {
           <Carousel.Item interval={2000}>
             <img src={image2} alt="Gallery" onClick={() => handleClickImage(image2)} />
           </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <img src={image3} alt="Gallery" onClick={() => handleClickImage(image3)} />
+          </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <img src={image4} alt="Gallery" onClick={() => handleClickImage(image4)} />
+          </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <img src={image5} alt="Gallery" onClick={() => handleClickImage(image5)} />
+          </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <img src={image6} alt="Gallery" onClick={() => handleClickImage(image6)} />
+          </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <img src={image7} alt="Gallery" onClick={() => handleClickImage(image7)} />
+          </Carousel.Item>
+          <Carousel.Item interval={2000}>
+            <img src={image8} alt="Gallery" onClick={() => handleClickImage(image8)} />
+          </Carousel.Item>
         </Carousel>
       </div>
 
