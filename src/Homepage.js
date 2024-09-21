@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Modal from 'react-bootstrap/Modal';
 import dhoni from "./images/dhoni.png";
 import { FaBars } from 'react-icons/fa';
+import resume from "./images/Haneesh_Resume.pdf";
 import image1 from "./images/image1.png";
 import image2 from "./images/image2.jpg";
 import image3 from "./images/image3.jpg";
@@ -81,7 +82,7 @@ function Homepage() {
       <div ref={aboutRef} className="aboutme">
         <h1>About Me</h1>
         <p className="aboutmatter">I'm currently a dedicated 4th-year student pursuing my B.Tech in Electronics and Communication Engineering, with a strong focus on Full Stack Web Development. I specialize in the MERN stack, working with React.js, Node.js, MongoDB, and Express.js to build dynamic and responsive web applications.</p>
-        <h2>Download RESUME</h2>
+        <a className='resumedown' href={resume} download="Haneesh_Resume.pdf" >Download RESUME</a>
         <h4>Skills:
           <p className="skill">MERN stack</p>
           <p className="skill">Python</p>
@@ -149,7 +150,7 @@ function Homepage() {
             <img src={location} className="loca" alt="Location" />
             <p className="cont">B.V Nagar, Nellore, A.P, India</p>
             <div className="social">
-              <ul className="interns">
+              <ul className="intern">
                 <li>Github: <a href="https://github.com/Haneesh-Dabbadi">Haneesh-Dabbadi</a></li>
                 <li>Linkedin: <a href="https://linkedin.com/in/haneesh-dabbadi-ab3842271">Haneesh Dabbadi</a></li>
               </ul>
