@@ -65,7 +65,7 @@
     padding-right: 30px;
     padding-top: 230px;
     font-size: 50px;
-    font-family:cursive;
+    font-family:'Times New Roman', Times, serif;
 }
 .homematter p{
     padding-top: 10px;
@@ -73,7 +73,7 @@
     padding-right: 30px;
     float: right;
     font-size: 20px;
-    font-family:cursive;
+    font-family:'Times New Roman', Times, serif;
 }
   
 .homepic{
@@ -108,7 +108,7 @@ hr{
     color: #39FF14;
     text-align: center;
     padding-top: 20px;
-    font-family: cursive;
+    font-family:'Times New Roman', Times, serif;
     box-sizing: border-box;
 }
 .aboutmatter{
@@ -120,7 +120,7 @@ hr{
     text-align: center;
     padding-bottom: 20px;
     font-size: larger;
-    font-family: cursive;
+    font-family:'Times New Roman', Times, serif;
 }
 .resumedown{
     display: inline-block;
@@ -129,7 +129,7 @@ hr{
     justify-content: center;
     margin-left: 39%;
     margin-right: 39%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Times New Roman', Times, serif;
     padding-top: 30px;
     font-weight: 200;
     font-size: 30px;
@@ -143,7 +143,7 @@ hr{
 .aboutme h4{
     color: #39FF14;
     padding-top: 50px;
-    font-family: cursive;
+    font-family:'Times New Roman', Times, serif;
     justify-content: center;
     display: flex;
 }
@@ -163,13 +163,13 @@ hr{
 }
 .experience h3{
     color: #39FF14;
-    font-family: cursive;
+    font-family:'Times New Roman', Times, serif;
     padding-left: 30px;
 }
 .interns{
     color: #39FF14;
     padding-left: 100px;
-    font-family: cursive;
+    font-family:'Times New Roman', Times, serif;
     font-size: 17px;
     list-style-type: square;
 }
@@ -183,7 +183,7 @@ hr{
 
 .projects h3 {
     color: #39FF14;
-    font-family: cursive;
+    font-family:'Times New Roman', Times, serif;
     padding-left: 15px;
     padding-bottom: 20px;
 }
@@ -215,7 +215,7 @@ hr{
 .intern{
     color: #39FF14;
     padding-left: 100px;
-    font-family: cursive;
+    font-family:'Times New Roman', Times, serif;
     font-size: 17px;
     list-style-type: square;
 }
@@ -250,7 +250,7 @@ hr{
 
 .imgcontainer p{
     color: #39FF14;
-    font-family: cursive;
+    font-family:'Times New Roman', Times, serif;
     text-align: center;
     padding-top: 20px;
     font-size: 17px;
@@ -264,7 +264,7 @@ hr{
 }
 
 .gallery h3 {
-    font-family: cursive;
+    font-family:'Times New Roman', Times, serif;
     padding-left: 30px;
     padding-bottom: 20px;
 }
@@ -292,7 +292,7 @@ hr{
 
 .contact h3 {
     color: #39FF14;
-    font-family: cursive;
+    font-family:'Times New Roman', Times, serif;
     padding-top: 20px;
     padding-left: 30px;
     padding-bottom: 20px;
@@ -320,7 +320,7 @@ hr{
 
 .con, .cont {
     color: #39FF14;
-    font-family: cursive;
+    font-family:'Times New Roman', Times, serif;
     margin: 0;
     padding-left: 10px;
 }
@@ -492,6 +492,11 @@ hr{
     .skill{
         font-size: 12px !important;
     }
+    .resumedown{
+        font-size: 12px;
+        margin-left: 36%;
+        margin-right: 36%;
+    }
 }
 hr {
     display: none;
@@ -594,5 +599,10 @@ hr {
     }
     .skill{
         font-size: 12px !important;
+    }
+    .resumedown{
+        font-size: 12px;
+        margin-left: 36%;
+        margin-right: 36%;
     }
 }
