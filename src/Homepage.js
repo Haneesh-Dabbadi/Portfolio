@@ -34,7 +34,7 @@ function Homepage() {
 
   const handleNavigation = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
-    setIsMenuOpen(false); // Close the menu after clicking a link
+    setIsMenuOpen(false); 
   };
 
   const handleClickImage = (imgsrc) => {
@@ -124,7 +124,6 @@ function Homepage() {
           <Carousel.Item interval={2000}>
             <img src={image2} alt="Gallery" onClick={() => handleClickImage(image2)} />
           </Carousel.Item>
-          {/* Add more Carousel Items as needed */}
         </Carousel>
       </div>
 
