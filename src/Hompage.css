@@ -429,7 +429,7 @@ hr{
     
     .contact h3 {
         color: #39FF14;
-        font-family: cursive;
+        font-family:'Times New Roman', Times, serif;
         padding-top: 20px;
         padding-left: 30px;
         padding-bottom: 20px;
@@ -456,7 +456,7 @@ hr{
     
     .con, .cont {
         color: #39FF14;
-        font-family: cursive;
+        font-family:'Times New Roman', Times, serif;
         margin: 0;
         padding-left: 10px;
     }
@@ -472,7 +472,7 @@ hr{
     .intern{
         color: #39FF14;
         padding-left: 0;
-        font-family: cursive;
+        font-family:'Times New Roman', Times, serif;
         font-size: 17px;
         list-style-type: square;
         margin-top: 0px;
@@ -493,9 +493,12 @@ hr{
         font-size: 12px !important;
     }
     .resumedown{
-        font-size: 12px;
+        font-size: 14px;
         margin-left: 36%;
         margin-right: 36%;
+    }
+    .projects{
+        margin-top: 190px;
     }
 }
 hr {
@@ -540,7 +543,7 @@ hr {
     
     .contact h3 {
         color: #39FF14;
-        font-family: cursive;
+        font-family:'Times New Roman', Times, serif;
         padding-top: 20px;
         padding-left: 30px;
         padding-bottom: 20px;
@@ -567,7 +570,7 @@ hr {
     
     .con, .cont {
         color: #39FF14;
-        font-family: cursive;
+        font-family:'Times New Roman', Times, serif;
         margin: 0;
         padding-left: 10px;
     }
@@ -580,7 +583,7 @@ hr {
     .intern{
         color: #39FF14;
         padding-left: 0;
-        font-family: cursive;
+        font-family:'Times New Roman', Times, serif;
         font-size: 17px;
         list-style-type: square;
         margin-top: 0px;
@@ -604,5 +607,8 @@ hr {
         font-size: 12px;
         margin-left: 36%;
         margin-right: 36%;
+    }
+    .projects{
+        margin-top: 190px;
     }
 }
