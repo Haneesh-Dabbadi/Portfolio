@@ -95,8 +95,9 @@ function Homepage() {
       <div ref={experienceRef} className="experience">
         <h3>Experience:</h3>
         <ul className="interns">
-          <li>APSSDC | Embedded Systems Intern</li>
+          <li>Blackbuck Education Pvt Ltd | MERN Stack Developer Intern</li>
           <li>IIDT APSCHE Blackbuck Engineers Pvt. Ltd. | VLSI Intern</li>
+          <li>APSSDC | Embedded Systems Intern</li>
           <li>GEETHANJALI INSTITUTE OF SCIENCE AND TECHNOLOGY | Co-Host and Organizer</li>
         </ul>
       </div>
