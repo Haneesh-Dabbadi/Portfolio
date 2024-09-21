@@ -1,19 +1,9 @@
-/* General Styles */
-.totalbg {
+.totalbg{
     background-color: black;
     width: 100%;
     height: 100%;
-  }
-
-  .menu-icon {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-    }
-    
-  
-  .navbar {
+}
+.navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -26,31 +16,21 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
 }
-
-  .navbar .logo {
-    font-size: 1.5rem;
-  }
-  
-  
-  .navbaritems{
+.navbaritems{
     display: flex;
     font-size: large;
     padding-right: 50px;
     
 }
-  
 .navbaritems p{
     cursor: pointer;
     transition: transform 0.2s ease;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 0px !important;
 }
 .navbaritems p:hover{
     transform: scale(1.2);
 }
-  
 .home{
     margin-top: 55px;
     margin-left: 20px;
@@ -76,7 +56,6 @@
     font-size: 20px;
     font-family:cursive;
 }
-  
 .homepic{
     width: 35%;
     margin: 10px;
@@ -94,7 +73,6 @@
 .homepic img:hover{
     transform: scale(1.1);
 }
-  
 .aboutme{
     padding-top: 55px;
     margin-left: 20px;
@@ -318,102 +296,3 @@ hr{
     margin-top: -150px;
     margin-left: 70px;
 }
-
-  
-  /* Media Queries for Responsive Design */
-  @media only screen and (max-width: 768px) {
-    .navbar {
-      font-size: large;
-      height: 50px;
-      flex-direction: column;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  
-    .navbaritems {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        padding: 20px;
-      }
-
-      .navbaritems.open {
-        display: flex;
-      }
-    
-      /* Show the hamburger menu icon */
-      .menu-icon {
-        display: block;
-      }
-
-      .navbaritems p {
-        padding: 10px 0;
-        border-bottom: 1px solid #444;
-        width: 100%;
-        text-align: center;
-      }
-    
-      /* Remove border from last item */
-      .navbaritems p:last-child {
-        border-bottom: none;
-      }
-  
-    .home {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .homepic {
-      width: 80%;
-    }
-  
-    .homematter {
-      width: 90%;
-    }
-  
-    .aboutme .aboutmatter {
-      width: 90%;
-    }
-  
-    .projects .imgcontainer {
-      width: 90%;
-    }
-  
-    .carousel img {
-      height: 300px;
-    }
-  
-    .contact .phonecall, .contact .email, .contact .location {
-      padding-left: 10px;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-  
-  @media only screen and (max-width: 425px) {
-    .navbar {
-      height: 40px;
-    }
-  
-    .homeimage {
-      height: 300px;
-    }
-  
-    .projects .imgcontainer {
-      width: 100%;
-    }
-  
-    .carousel img {
-      height: 250px;
-    }
-  
-    .contact .phonecall, .contact .email, .contact .location {
-      padding-left: 5px;
-      flex-direction: column;
-    }
-  }
-  
