@@ -1,8 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Modal from 'react-bootstrap/Modal';
 import dhoni from "./images/dhoni.png";
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import resume from "./images/Haneesh_Resume.pdf";
 import image1 from "./images/image1.png";
 import image2 from "./images/image2.jpg";
@@ -22,6 +22,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Homepage() {
   const [activeTab, setActiveTab] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuRef = useRef(null);
 
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
@@ -48,14 +50,33 @@ function Homepage() {
   };
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(prevState => !prevState);
   };
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
 
   return (
     <div className="totalbg">
       <div className="navbar">
         <div className="logo">Haneesh Dabbadi.</div>
-        <div className={`navbaritems ${isMenuOpen ? 'open' : ''}`}>
+        <div ref={menuRef} className={`navbaritems ${isMenuOpen ? 'open' : ''}`}>
           <p onClick={() => handleNavigation(homeRef)}>Home</p>
           <p onClick={() => handleNavigation(aboutRef)}>About</p>
           <p onClick={() => handleNavigation(experienceRef)}>Experience</p>
@@ -64,7 +85,7 @@ function Homepage() {
           <p onClick={() => handleNavigation(contactRef)}>Contact</p>
         </div>
         <div className="menu-icon" onClick={toggleMenu}>
-  {isMenuOpen ? <i className="fas fa-times"></i> : <FaBars />}
+  {isMenuOpen ? <FaTimes /> : <FaBars />}
 </div>
       </div>
 
