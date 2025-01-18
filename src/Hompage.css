@@ -179,11 +179,13 @@ hr{
     list-style-type: square;
 }
 .projects {
-    height: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 20px;
     margin-left: 20px;
     margin-right: 20px;
-    padding-top: 55px !important;
+    padding-top: 55px;
 }
 
 .projects h3 {
@@ -414,6 +416,7 @@ hr{
     }
     .projects .imgcontainer {
         width: 90%;
+        margin-top: 20px;
         margin: 0 auto;
     }
 
@@ -536,6 +539,7 @@ hr {
 
     .projects .imgcontainer {
         width: 100%;
+        margin-top: 20px;
         margin: 0 auto; 
     }
 

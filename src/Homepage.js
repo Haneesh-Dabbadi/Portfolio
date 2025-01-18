@@ -23,6 +23,7 @@ function Homepage() {
   const [activeTab, setActiveTab] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+
   const menuRef = useRef(null);
 
   const homeRef = useRef(null);
@@ -126,6 +127,15 @@ function Homepage() {
       <hr />
       <div ref={projectRef} className="projects">
         <h3>Projects:</h3>
+        <div className="imgcontainer">
+          <img className="votingimg" src={voting} alt="Voting project" />
+          <div className="middle">
+            <a href="https://github.com/Haneesh-Dabbadi/Verilog-HDL-for-Designing-of-digital-Voting-machine">
+              <button className="probutton">Visit</button>
+            </a>
+          </div>
+          <p>Designing of digital Voting Machine using Verilog HDL</p>
+        </div>
         <div className="imgcontainer">
           <img className="votingimg" src={voting} alt="Voting project" />
           <div className="middle">
