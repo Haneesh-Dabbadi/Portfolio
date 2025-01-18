@@ -4,6 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import dhoni from "./images/dhoni.png";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import resume from "./images/Haneesh_Resume.pdf";
+import localsphere from "./images/localsphere.png";
 import image1 from "./images/image1.png";
 import image2 from "./images/image2.jpg";
 import image3 from "./images/image3.jpg";
@@ -137,13 +138,13 @@ function Homepage() {
           <p>Designing of digital Voting Machine using Verilog HDL</p>
         </div>
         <div className="imgcontainer">
-          <img className="votingimg" src={voting} alt="Voting project" />
+          <img className="votingimg" src={localsphere} alt="MERN Stack project" />
           <div className="middle">
-            <a href="https://github.com/Haneesh-Dabbadi/Verilog-HDL-for-Designing-of-digital-Voting-machine">
+            <a href="https://github.com/Haneesh-Dabbadi/LocalSphere">
               <button className="probutton">Visit</button>
             </a>
           </div>
-          <p>Designing of digital Voting Machine using Verilog HDL</p>
+          <p>Local Sphere: A Web application using MERN Stack.</p>
         </div>
       </div>
 
