@@ -5,6 +5,7 @@ import dhoni from "./images/dhoni.png";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import resume from "./images/Haneesh_Resume.pdf";
 import localsphere from "./images/localsphere.png";
+import jarvis from "./images/jarvis.jpg";
 import image1 from "./images/image1.png";
 import image2 from "./images/image2.jpg";
 import image3 from "./images/image3.jpg";
@@ -145,6 +146,24 @@ function Homepage() {
             </a>
           </div>
           <p>Local Sphere: A Web application using MERN Stack.</p>
+        </div>
+        <div className="imgcontainer">
+          <img className="votingimg" src={jarvis} alt="Jarvis Voice Assistant" />
+          <div className="middle">
+            <a href="https://github.com/Haneesh-Dabbadi/Jarvis-Voice-Assistant">
+              <button className="probutton">Visit</button>
+            </a>
+          </div>
+          <p>JARVIS Voice Assistant</p>
+        </div>
+        <div className="imgcontainer">
+          <img className="votingimg" src={jarvis} alt="Jarvis Voice Assistant" />
+          <div className="middle">
+            <a href="https://github.com/Haneesh-Dabbadi/Jarvis-Voice-Assistant">
+              <button className="probutton">Visit</button>
+            </a>
+          </div>
+          <p>JARVIS Voice Assistant</p>
         </div>
       </div>
 
