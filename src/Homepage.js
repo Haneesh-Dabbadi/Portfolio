@@ -156,15 +156,7 @@ function Homepage() {
           </div>
           <p>JARVIS Voice Assistant</p>
         </div>
-        <div className="imgcontainer">
-          <img className="votingimg" src={jarvis} alt="Jarvis Voice Assistant" />
-          <div className="middle">
-            <a href="https://github.com/Haneesh-Dabbadi/Jarvis-Voice-Assistant">
-              <button className="probutton">Visit</button>
-            </a>
-          </div>
-          <p>JARVIS Voice Assistant</p>
-        </div>
+        
       </div>
 
       <hr />
