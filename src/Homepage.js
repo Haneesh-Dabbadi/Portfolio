@@ -108,7 +108,7 @@ function Homepage() {
       <div ref={aboutRef} className="aboutme">
         <h1>About Me</h1>
         <p className="aboutmatter">I'm currently a dedicated 4th-year student pursuing my B.Tech in Electronics and Communication Engineering, with a strong focus on Full Stack Web Development. I specialize in the MERN stack, working with React.js, Node.js, MongoDB, and Express.js to build dynamic and responsive web applications.</p>
-        <a className='resumedown' href={resume} download="haneesh_resume.pdf" >Download RESUME</a>
+        <a className='resumedown' href={resume} download="Haneesh_Resume.pdf" >Download RESUME</a>
         <h4>Skills:
           <p className="skill">MERN stack</p>
           <p className="skill">Python</p>
