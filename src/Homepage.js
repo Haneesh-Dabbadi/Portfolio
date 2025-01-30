@@ -175,7 +175,7 @@ function Homepage() {
                     <button className="probutton">Visit</button>
                 </a>
             </div>
-            <p>To Do List Application</p>
+            <p>To-Do List Application</p>
         </div>
     </div>
 </div>
