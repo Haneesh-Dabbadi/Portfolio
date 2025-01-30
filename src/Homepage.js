@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Modal from 'react-bootstrap/Modal';
 import dhoni from "./images/dhoni.png";
 import { FaBars, FaTimes } from 'react-icons/fa';
-import resume from "./images/haneesh_resume.pdf";
+import resume from "./images/Haneesh_Resume.pdf";
 import localsphere from "./images/localsphere.png";
 import jarvis from "./images/jarvis.jpg";
 import todo from "./images/todo.png";
