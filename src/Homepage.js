@@ -6,6 +6,8 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import resume from "./images/Haneesh_Resume.pdf";
 import localsphere from "./images/localsphere.png";
 import jarvis from "./images/jarvis.jpg";
+import todo from "./images/todo.png";
+import eventmanagementapp from "./images/eventmanagementapp.png";
 import image1 from "./images/image1.png";
 import image2 from "./images/image2.jpg";
 import image3 from "./images/image3.jpg";
@@ -128,37 +130,55 @@ function Homepage() {
 
       <hr />
       <div ref={projectRef} className="projects">
-        <h3>Projects:</h3>
+    <h3>Projects:</h3>
+    <div className="projects-grid">
         <div className="imgcontainer">
-          <img className="votingimg" src={voting} alt="Voting project" />
-          <div className="middle">
-            <a href="https://github.com/Haneesh-Dabbadi/Verilog-HDL-for-Designing-of-digital-Voting-machine">
-              <button className="probutton">Visit</button>
-            </a>
-          </div>
-          <p>Designing of digital Voting Machine using Verilog HDL</p>
+            <img className="votingimg" src={voting} alt="Voting project" />
+            <div className="middle">
+                <a href="https://github.com/Haneesh-Dabbadi/Verilog-HDL-for-Designing-of-digital-Voting-machine">
+                    <button className="probutton">Visit</button>
+                </a>
+            </div>
+            <p>Designing of digital Voting Machine using Verilog HDL</p>
         </div>
         <div className="imgcontainer">
-          <img className="votingimg" src={localsphere} alt="MERN Stack project" />
-          <div className="middle">
-            <a href="https://github.com/Haneesh-Dabbadi/LocalSphere">
-              <button className="probutton">Visit</button>
-            </a>
-          </div>
-          <p>Local Sphere: A Web application using MERN Stack.</p>
+            <img className="votingimg" src={localsphere} alt="MERN Stack project" />
+            <div className="middle">
+                <a href="https://github.com/Haneesh-Dabbadi/LocalSphere">
+                    <button className="probutton">Visit</button>
+                </a>
+            </div>
+            <p>Local Sphere: A Web application using MERN Stack.</p>
         </div>
         <div className="imgcontainer">
-          <img className="votingimg" src={jarvis} alt="Jarvis Voice Assistant" />
-          <div className="middle">
-            <a href="https://github.com/Haneesh-Dabbadi/Jarvis-Voice-Assistant">
-              <button className="probutton">Visit</button>
-            </a>
-          </div>
-          <p>JARVIS Voice Assistant</p>
+            <img className="votingimg" src={jarvis} alt="Jarvis Voice Assistant" />
+            <div className="middle">
+                <a href="https://github.com/Haneesh-Dabbadi/Jarvis-Voice-Assistant">
+                    <button className="probutton">Visit</button>
+                </a>
+            </div>
+            <p>JARVIS Voice Assistant</p>
         </div>
-        
-      </div>
-
+        <div className="imgcontainer">
+            <img className="votingimg" src={eventmanagementapp} alt="Event Management Application" />
+            <div className="middle">
+                <a href="https://github.com/Haneesh-Dabbadi/Event-Management-Application">
+                    <button className="probutton">Visit</button>
+                </a>
+            </div>
+            <p>Event Management Application using MERN Stack</p>
+        </div>
+        <div className="imgcontainer">
+            <img className="votingimg" src={todo} alt="To Do List Application" />
+            <div className="middle">
+                <a href="https://github.com/Haneesh-Dabbadi/ToDo-List-App">
+                    <button className="probutton">Visit</button>
+                </a>
+            </div>
+            <p>To Do List Application</p>
+        </div>
+    </div>
+</div>
       <hr />
       <div ref={galleryRef} className="gallery">
         <h3>Gallery:</h3>
