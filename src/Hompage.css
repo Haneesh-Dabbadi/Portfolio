@@ -417,8 +417,13 @@ hr{
         text-align: center; 
     }
     .projects {
-        margin-top: 180px;
+        margin-top: 0px;
         padding: 10px;
+    }
+    .projects h3 {
+        margin-top: 180px; 
+        text-align: left;
+        padding-left: 5px;
     }
 
     .projects-grid {
@@ -519,9 +524,7 @@ hr{
         margin-left: 36%;
         margin-right: 36%;
     }
-    .projects{
-        margin-top: 190px;
-    }
+    
 }
 hr {
     display: none;
