@@ -721,6 +721,8 @@
     }
 
     .homeimage {
+        margin-left: 0px;
+        margin-right: 0px;
         height: 250px;
         width: 90%;
         border-radius: 10px;
