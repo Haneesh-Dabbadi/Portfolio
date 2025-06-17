@@ -718,147 +718,97 @@
 
     .home {
         margin-top: 20px;
-        padding: 0 15px;
-        text-align: center;
-        align-items: center;
     }
 
-    .homematter {
-        width: 100%;
-        text-align: center;
+    .homeimage {
+        height: 250px;
+        width: 90%;
+        border-radius: 10px;
+        box-shadow: 0 0 12px #BF00FF;
     }
 
     .homematter b {
         padding-top: 20px;
         margin-top: 30px;
-        font-size: 20px;
     }
 
     .homematter p {
-        font-size: 14px;
-        line-height: 1.5;
-        margin-top: 10px;
-    }
-
-    .homeimage {
-        width: 100%;
-        height: auto;
-        max-width: 250px;
-        margin: 20px auto 0;
-        border-radius: 10px;
-        box-shadow: 0 0 12px #BF00FF;
+        padding-left: 0%;
+        text-align: center;
     }
 
     .projects {
-        margin-top: 50px;
+        margin-top: 180px;
         padding: 10px;
-    }
-
-    .projects h3 {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    .projects-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 0 10px;
     }
 
     .imgcontainer {
         width: 100%;
         margin: 0 auto;
-        display: flex;
-        justify-content: center;
     }
 
     .carousel img {
+        height: 250px;
         width: 100%;
-        max-width: 100%;
-        height: auto;
         border-radius: 10px;
         box-shadow: 0 0 10px #BF00FF;
     }
 
-    .aboutme .aboutmatter {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .aboutme h4 {
-        font-size: 16px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .skill {
-        font-size: 12px !important;
-        text-align: center;
-    }
-
-    .resumedown {
-        font-size: 13px;
-        margin: 20px auto;
-        padding: 6px 12px;
-        display: block;
-        width: fit-content;
-        box-shadow: 0 0 8px #39FF14;
-    }
-
     .contact {
-        padding: 20px 10px;
-        margin: 0 auto;
-        text-align: center;
+        margin: 0 20px;
+        padding-bottom: 20px;
     }
 
     .contact h3 {
         font-size: 18px;
-        padding-top: 10px;
-        padding-bottom: 20px;
+        text-align: center;
     }
 
-    .phonecall,
-    .email,
-    .location {
+    .phonecall, .email, .location {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         margin-top: 15px;
-        flex-wrap: wrap;
     }
 
-    .loca,
-    .phone,
-    .emai {
+    .loca, .phone, .emai {
         width: 30px;
         height: 30px;
         box-shadow: 2px 2px 8px #BF00FF;
         margin-right: 10px;
     }
 
-    .con,
-    .cont {
+    .con, .cont {
         font-size: 14px;
-        margin-left: 5px;
-        color: #39FF14;
-        font-family: 'Times New Roman', Times, serif;
+        margin-left: 10px;
+    }
+
+    .aboutme h4 {
+        font-size: 16px;
+        margin: 0 10px;
+        text-align: center;
+    }
+
+    .skill {
+        font-size: 11px !important;
+        text-align: center;
+    }
+
+    .resumedown {
+        font-size: 13px;
+        margin: 20px auto;
     }
 
     .social {
-        margin-left: 0;
-        margin-top: 20px;
-        text-align: center;
-        font-size: 15px;
+        margin-left: 20px;
     }
 
     .intern {
         font-size: 15px;
-        text-align: center;
-        list-style-position: inside;
     }
+}
 
-    hr {
-        display: none;
-    }
+/* ===== Optional: Remove HR on small screens ===== */
+hr {
+    display: none;
 }
