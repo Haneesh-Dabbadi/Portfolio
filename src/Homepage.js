@@ -1,8 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import Modal from 'react-bootstrap/Modal';
-import dhoni from "./images/dhoni.png";
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaGithub, FaLinkedin, FaDownload, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import dhoni from "./images/dhoni.jpg";
 import resume from "./images/Haneesh_Resume.pdf";
 import localsphere from "./images/localsphere.png";
 import jarvis from "./images/jarvis.jpg";
@@ -16,230 +14,381 @@ import image5 from "./images/image5.jpg";
 import image6 from "./images/image6.png";
 import image7 from "./images/image7.jpg";
 import image8 from "./images/image8.png";
-import phonecall from "./images/phonecall.png";
-import email from "./images/email.png";
-import location from "./images/location.png";
 import voting from "./images/voting.webp";
-import './Hompage.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+const galleryImages = [image1, image2, image3, image4, image5, image6, image7, image8];
 
 function Homepage() {
-  const [activeTab, setActiveTab] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-
-  const menuRef = useRef(null);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState('');
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
-  const contactRef = useRef(null);
   const projectRef = useRef(null);
   const galleryRef = useRef(null);
-
-  const [showModal, setShowModal] = useState(false);
-  const [selectedImage, setSelectedImage] = useState('');
+  const contactRef = useRef(null);
 
   const handleNavigation = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
-    setIsMenuOpen(false); 
+    setIsMenuOpen(false);
   };
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleClickImage = (imgsrc) => {
     setSelectedImage(imgsrc);
     setShowModal(true);
   };
 
-  const handleCloseModal = () => {
-    setShowModal(false);
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % galleryImages.length);
   };
 
-  const toggleMenu = () => {
-    setIsMenuOpen(prevState => !prevState);
-  };
-
-  const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
-      setIsMenuOpen(false);
-    }
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
   };
 
   useEffect(() => {
-    if (isMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
+    const interval = setInterval(nextSlide, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isMenuOpen]);
+  const projects = [
+    { img: voting, link: "https://github.com/Haneesh-Dabbadi/Verilog-HDL-for-Designing-of-digital-Voting-machine", title: "Voting Machine using Verilog HDL", desc: "Digital voting machine designed with Verilog HDL" },
+    { img: localsphere, link: "https://github.com/Haneesh-Dabbadi/LocalSphere", title: "Local Sphere - MERN Web App", desc: "Full-stack web application built with MERN stack" },
+    { img: jarvis, link: "https://github.com/Haneesh-Dabbadi/Jarvis-Voice-Assistant", title: "JARVIS Voice Assistant", desc: "AI-powered voice assistant with natural language processing" },
+    { img: eventmanagementapp, link: "https://github.com/Haneesh-Dabbadi/Event-Management-Application", title: "Event Management App", desc: "Comprehensive event planning and management solution" },
+    { img: todo, link: "https://github.com/Haneesh-Dabbadi/ToDo-List-App", title: "To-Do List App", desc: "Task management application with modern UI" }
+  ];
 
+  const skills = [ "Python", "MySQL","MERN Stack", "HTML/CSS", "JAVA","UI/UX Design", "Prompt Engineering"];
+
+  const experiences = [
+    { company: "Blackbuck Education Pvt Ltd", role: "MERN Stack Developer Intern", duration: "2023-2024" },
+    { company: "IIDT APSCHE", role: "VLSI Intern", duration: "2023" },
+    { company: "APSSDC", role: "Embedded Systems Intern", duration: "2022" },
+    { company: "GEETHANJALI INSTITUTE", role: "Co-Host & Organizer", duration: "2023-2024" }
+  ];
 
   return (
-    <div className="totalbg">
-      <div className="navbar">
-        <div className="logo">Haneesh Dabbadi.</div>
-        <div ref={menuRef} className={`navbaritems ${isMenuOpen ? 'open' : ''}`}>
-          <p onClick={() => handleNavigation(homeRef)}>Home</p>
-          <p onClick={() => handleNavigation(aboutRef)}>About</p>
-          <p onClick={() => handleNavigation(experienceRef)}>Experience</p>
-          <p onClick={() => handleNavigation(projectRef)}>Projects</p>
-          <p onClick={() => handleNavigation(galleryRef)}>Gallery</p>
-          <p onClick={() => handleNavigation(contactRef)}>Contact</p>
-        </div>
-        <div className="menu-icon" onClick={toggleMenu}>
-  {isMenuOpen ? <FaTimes /> : <FaBars />}
-</div>
-      </div>
-
-      <div ref={homeRef} className="home d-flex">
-        <div className="homematter">
-          <b>Hello, I'm Haneesh</b><br />
-          <p>I'm a student passionate about Full Stack Web Development, specializing in the MERN stack. Skilled in React.js, Node.js, MongoDB, and Express.js.</p>
-        </div>
-        <div className="homepic">
-          <img className="homeimage" src={dhoni} alt="Dhoni" />
-        </div>
-      </div>
-
-      <hr />
-      <div ref={aboutRef} className="aboutme">
-        <h1>About Me</h1>
-        <p className="aboutmatter">I'm currently a dedicated 4th-year student pursuing my B.Tech in Electronics and Communication Engineering, with a strong focus on Full Stack Web Development. I specialize in the MERN stack, working with React.js, Node.js, MongoDB, and Express.js to build dynamic and responsive web applications.</p>
-        <a className='resumedown' href={resume} download="Haneesh_Resume.pdf" >Download RESUME</a>
-        <h4>Skills:
-          <p className="skill">MERN stack</p>
-          <p className="skill">Python</p>
-          <p className="skill">MySQL</p>
-          <p className="skill">Prompt Engineering</p>
-        </h4>
-      </div>
-
-      <hr />
-      <div ref={experienceRef} className="experience">
-        <h3>Experience:</h3>
-        <ul className="interns">
-          <li>Blackbuck Education Pvt Ltd | MERN Stack Developer Intern</li>
-          <li>IIDT APSCHE Blackbuck Engineers Pvt. Ltd. | VLSI Intern</li>
-          <li>APSSDC | Embedded Systems Intern</li>
-          <li>GEETHANJALI INSTITUTE OF SCIENCE AND TECHNOLOGY | Co-Host and Organizer</li>
-        </ul>
-      </div>
-
-      <hr />
-      <div ref={projectRef} className="projects">
-    <h3>Projects:</h3>
-    <div className="projects-grid">
-        <div className="imgcontainer">
-            <img className="votingimg" src={voting} alt="Voting project" />
-            <div className="middle">
-                <a href="https://github.com/Haneesh-Dabbadi/Verilog-HDL-for-Designing-of-digital-Voting-machine">
-                    <button className="probutton">Visit</button>
-                </a>
-            </div>
-            <p>Designing of digital Voting Machine using Verilog HDL</p>
-        </div>
-        <div className="imgcontainer">
-            <img className="votingimg" src={localsphere} alt="MERN Stack project" />
-            <div className="middle">
-                <a href="https://github.com/Haneesh-Dabbadi/LocalSphere">
-                    <button className="probutton">Visit</button>
-                </a>
-            </div>
-            <p>Local Sphere: A Web application using MERN Stack.</p>
-        </div>
-        <div className="imgcontainer">
-            <img className="votingimg" src={jarvis} alt="Jarvis Voice Assistant" />
-            <div className="middle">
-                <a href="https://github.com/Haneesh-Dabbadi/Jarvis-Voice-Assistant">
-                    <button className="probutton">Visit</button>
-                </a>
-            </div>
-            <p>JARVIS Voice Assistant</p>
-        </div>
-        <div className="imgcontainer">
-            <img className="votingimg" src={eventmanagementapp} alt="Event Management Application" />
-            <div className="middle">
-                <a href="https://github.com/Haneesh-Dabbadi/Event-Management-Application">
-                    <button className="probutton">Visit</button>
-                </a>
-            </div>
-            <p>Event Management Application using MERN Stack</p>
-        </div>
-        <div className="imgcontainer">
-            <img className="votingimg" src={todo} alt="To Do List Application" />
-            <div className="middle">
-                <a href="https://github.com/Haneesh-Dabbadi/ToDo-List-App">
-                    <button className="probutton">Visit</button>
-                </a>
-            </div>
-            <p>To-Do List Application</p>
-        </div>
-    </div>
-</div>
-      <hr />
-      <div ref={galleryRef} className="gallery">
-        <h3>Gallery:</h3>
-        <Carousel className="carousel">
-          <Carousel.Item interval={2000}>
-            <img src={image1} alt="Gallery" onClick={() => handleClickImage(image1)} />
-          </Carousel.Item>
-          <Carousel.Item interval={2000}>
-            <img src={image2} alt="Gallery" onClick={() => handleClickImage(image2)} />
-          </Carousel.Item>
-          <Carousel.Item interval={2000}>
-            <img src={image3} alt="Gallery" onClick={() => handleClickImage(image3)} />
-          </Carousel.Item>
-          <Carousel.Item interval={2000}>
-            <img src={image4} alt="Gallery" onClick={() => handleClickImage(image4)} />
-          </Carousel.Item>
-          <Carousel.Item interval={2000}>
-            <img src={image5} alt="Gallery" onClick={() => handleClickImage(image5)} />
-          </Carousel.Item>
-          <Carousel.Item interval={2000}>
-            <img src={image6} alt="Gallery" onClick={() => handleClickImage(image6)} />
-          </Carousel.Item>
-          <Carousel.Item interval={2000}>
-            <img src={image7} alt="Gallery" onClick={() => handleClickImage(image7)} />
-          </Carousel.Item>
-          <Carousel.Item interval={2000}>
-            <img src={image8} alt="Gallery" onClick={() => handleClickImage(image8)} />
-          </Carousel.Item>
-        </Carousel>
-      </div>
-
-      <Modal show={showModal} onHide={handleCloseModal} centered>
-        <Modal.Body>
-          <img src={selectedImage} style={{ width: '100%' }} alt="Selected" />
-        </Modal.Body>
-      </Modal>
-
-      <hr />
-      <div ref={contactRef} className="contact">
-        <h3>Contact Info & Social Media Links:</h3>
-        <div className="column">
-          <div className="phonecall d-flex">
-            <img src={phonecall} className="phone" alt="Phone" />
-            <p className="con">+91 7702693774</p>
+    <div className="bg-dark text-light" style={{ fontFamily: "'Inter', 'Segoe UI', sans-serif" }}>
+      {/* Navigation */}
+      <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{ backgroundColor: '#1a1a2e', boxShadow: '0 2px 20px rgba(0,0,0,0.3)' }}>
+        <div className="container">
+          <span className="navbar-brand fw-bold fs-3 text-info">Haneesh Dabbadi</span>
+          <button className="navbar-toggler border-0" onClick={toggleMenu} style={{ boxShadow: 'none' }}>
+            {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+          <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`}>
+            <ul className="navbar-nav ms-auto">
+              {[
+                { ref: homeRef, label: 'Home' },
+                { ref: aboutRef, label: 'About' },
+                { ref: experienceRef, label: 'Experience' },
+                { ref: projectRef, label: 'Projects' },
+                { ref: contactRef, label: 'Contact' }
+              ].map(({ ref, label }) => (
+                <li key={label} className="nav-item mx-2">
+                  <span 
+                    className="nav-link fw-medium px-3 py-2 rounded-pill text-light"
+                    onClick={() => handleNavigation(ref)}
+                    style={{ 
+                      cursor: 'pointer', 
+                      transition: 'all 0.3s ease',
+                      ':hover': { backgroundColor: '#0dcaf0', color: '#000' }
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#0dcaf0';
+                      e.target.style.color = '#000';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = 'transparent';
+                      e.target.style.color = '#fff';
+                    }}
+                  >
+                    {label}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="email d-flex">
-            <img src={email} className="emai" alt="Email" />
-            <p className="con">haneeshdabbadi@gmail.com</p>
-          </div>
-          <div className="location">
-            <img src={location} className="loca" alt="Location" />
-            <p className="cont">B.V Nagar, Nellore, A.P, India</p>
-            <div className="social">
-              <ul className="intern">
-                <li>Github: <a href="https://github.com/Haneesh-Dabbadi">Haneesh-Dabbadi</a></li>
-                <li>Linkedin: <a href="https://linkedin.com/in/haneesh-dabbadi-ab3842271">Haneesh Dabbadi</a></li>
-              </ul>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <header ref={homeRef} className="py-5" style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', minHeight: '90vh' }}>
+        <div className="container">
+          <div className="row align-items-center min-vh-75">
+            <div className="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+              <h1 className="display-3 fw-bold mb-4">
+                Hello, I'm <span className="text-info">Haneesh</span>
+              </h1>
+              <p className="lead mb-4 text-light-emphasis">
+                Full Stack Developer specializing in MERN Stack
+              </p>
+              <p className="fs-5 mb-4 text-secondary">
+                React.js | Node.js | MongoDB | Express.js
+              </p>
+              <div className="d-flex gap-3 justify-content-center justify-content-lg-start">
+                <button 
+                  className="btn btn-info btn-lg px-4 py-2 fw-semibold"
+                  onClick={() => handleNavigation(projectRef)}
+                >
+                  View Projects
+                </button>
+                <button 
+                  className="btn btn-outline-info btn-lg px-4 py-2 fw-semibold"
+                  onClick={() => handleNavigation(contactRef)}
+                >
+                  Contact Me
+                </button>
+              </div>
+            </div>
+            <div className="col-lg-6 text-center">
+              <img 
+                src={dhoni} 
+                alt="Haneesh Dabbadi" 
+                className="img-fluid rounded-circle shadow-lg"
+                style={{ 
+                  width: '300px', 
+                  height: '300px', 
+                  objectFit: 'cover',
+                  border: '5px solid #0dcaf0',
+                  transition: 'transform 0.3s ease'
+                }}
+                onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
+                onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+              />
             </div>
           </div>
         </div>
-      </div>
+      </header>
+
+      {/* About Section */}
+      <section ref={aboutRef} className="py-5" style={{ backgroundColor: '#0f1419' }}>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 mx-auto text-center">
+              <h2 className="display-5 fw-bold mb-4 text-info">About Me</h2>
+              <p className="lead mb-4">
+                I'm a 4th-year ECE student with a passion for full stack development using the MERN stack. 
+                I bring concepts to life with clean, scalable code and modern user experiences.
+              </p>
+              <div className="mb-4">
+                <a 
+                  className="btn btn-outline-info btn-lg"
+                  href={resume}
+                  download
+                >
+                  <FaDownload className="me-2" />
+                  Download Resume
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="row mt-5">
+            <div className="col-12">
+              <h4 className="text-center mb-4 text-info">Technical Skills</h4>
+              <div className="d-flex justify-content-center flex-wrap gap-3">
+                {skills.map((skill, index) => (
+                  <span 
+                    key={index}
+                    className="badge fs-6 px-3 py-2"
+                    style={{ 
+                      backgroundColor: '#0dcaf0', 
+                      color: '#000',
+                      borderRadius: '25px',
+                      transition: 'transform 0.2s ease'
+                    }}
+                    onMouseEnter={(e) => e.target.style.transform = 'scale(1.1)'}
+                    onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section ref={experienceRef} className="py-5" style={{ backgroundColor: '#1a1a2e' }}>
+        <div className="container">
+          <h2 className="display-5 fw-bold text-center mb-5 text-info">Experience</h2>
+          <div className="row g-4">
+            {experiences.map((exp, index) => (
+              <div key={index} className="col-md-6">
+                <div 
+                  className="card h-100 border-0 shadow-lg"
+                  style={{ 
+                    backgroundColor: '#16213e',
+                    transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-10px)';
+                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(13, 202, 240, 0.2)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                  }}
+                >
+                  <div className="card-body p-4">
+                    <h5 className="card-title text-info fw-bold">{exp.company}</h5>
+                    <h6 className="card-subtitle text-light mb-3">{exp.role}</h6>
+                    <span className="badge bg-info text-dark">{exp.duration}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section ref={projectRef} className="py-5" style={{ backgroundColor: '#0f1419' }}>
+        <div className="container">
+          <h2 className="display-5 fw-bold text-center mb-5 text-info">Projects</h2>
+          <div className="row g-4">
+            {projects.map((project, index) => (
+              <div key={index} className="col-lg-4 col-md-6">
+                <div 
+                  className="card h-100 border-0 shadow-lg"
+                  style={{ 
+                    backgroundColor: '#1a1a2e',
+                    transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-15px)';
+                    e.currentTarget.style.boxShadow = '0 25px 50px rgba(13, 202, 240, 0.3)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                  }}
+                >
+                  <img 
+                    src={project.img} 
+                    className="card-img-top" 
+                    alt={project.title}
+                    style={{ height: '200px', objectFit: 'cover' }}
+                  />
+                  <div className="card-body d-flex flex-column p-4">
+                    <h5 className="card-title text-info fw-bold">{project.title}</h5>
+                    <p className="card-text text-light-emphasis flex-grow-1">{project.desc}</p>
+                    <a 
+                      href={project.link} 
+                      className="btn btn-outline-info mt-auto"
+                      target="_blank" 
+                      rel="noreferrer"
+                    >
+                      <FaGithub className="me-2" />
+                      View Project
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* Contact Section */}
+      <footer ref={contactRef} className="py-5" style={{ backgroundColor: '#1a1a2e' }}>
+        <div className="container">
+          <h2 className="display-5 fw-bold text-center mb-5 text-info">Get In Touch</h2>
+          <div className="row">
+            <div className="col-lg-6 mx-auto">
+              <div className="text-center">
+                <div className="row g-4 mb-4">
+                  <div className="col-md-4 mb-4">
+                    <div className="p-4 h-100 d-flex flex-column align-items-center">
+                      <FaPhone className="text-info mb-3" size={30} />
+                      <p className="mb-2 fw-semibold">Phone</p>
+                      <p className="text-light-emphasis mb-0 text-center">+91 7702693774</p>
+                    </div>
+                  </div>
+                  <div className="col-md-4 mb-4">
+                    <div className="p-4 h-100 d-flex flex-column align-items-center">
+                      <FaEnvelope className="text-info mb-3" size={30} />
+                      <p className="mb-2 fw-semibold">Email</p>
+                      <p className="text-light-emphasis mb-0 text-center">haneeshdabbadi@gmail.com</p>
+                    </div>
+                  </div>
+                  <div className="col-md-4 mb-4">
+                    <div className="p-4 h-100 d-flex flex-column align-items-center">
+                      <FaMapMarkerAlt className="text-info mb-3" size={30} />
+                      <p className="mb-2 fw-semibold">Location</p>
+                      <p className="text-light-emphasis mb-0 text-center">Nellore, A.P, India</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="d-flex justify-content-center gap-4 mt-4">
+                  <a 
+                    href="https://github.com/Haneesh-Dabbadi" 
+                    className="text-light p-3 rounded-circle"
+                    target="_blank" 
+                    rel="noreferrer"
+                    style={{ 
+                      backgroundColor: '#1a1a2e',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#0dcaf0';
+                      e.target.style.color = '#000';
+                      e.target.style.transform = 'scale(1.1)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = '#1a1a2e';
+                      e.target.style.color = '#fff';
+                      e.target.style.transform = 'scale(1)';
+                    }}
+                  >
+                    <FaGithub size={24} />
+                  </a>
+                  <a 
+                    href="https://linkedin.com/in/haneesh-dabbadi-ab3842271" 
+                    className="text-light p-3 rounded-circle"
+                    target="_blank" 
+                    rel="noreferrer"
+                    style={{ 
+                      backgroundColor: '#1a1a2e',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#0dcaf0';
+                      e.target.style.color = '#000';
+                      e.target.style.transform = 'scale(1.1)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = '#1a1a2e';
+                      e.target.style.color = '#fff';
+                      e.target.style.transform = 'scale(1)';
+                    }}
+                  >
+                    <FaLinkedin size={24} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-5 pt-4" style={{ borderTop: '1px solid white' }}>
+            <p className="text-light-emphasis mb-0">
+              © 2024 Haneesh Dabbadi. Built with React & Bootstrap 5
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      
     </div>
   );
 }
