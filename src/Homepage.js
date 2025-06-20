@@ -88,7 +88,7 @@ function Homepage() {
   return (
     <div className="bg-dark text-light" style={{ fontFamily: "'Inter', 'Segoe UI', sans-serif" }}>
       {/* Navigation */}
-      <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{ backgroundColor: '#1a1a2e', boxShadow: '0 2px 20px rgba(0,0,0,0.3)' }}>
+      <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{ backgroundColor: '#1a1a2e', boxShadow: '0 2px 20px rgba(25, 88, 184, 0.3)' }}>
         <div className="container">
           <span className="navbar-brand fw-bold fs-3 text-info">Haneesh Dabbadi</span>
           <button className="navbar-toggler border-0" onClick={toggleMenu} style={{ boxShadow: 'none' }}>
@@ -506,7 +506,7 @@ function Homepage() {
                     <FaGithub size={24} />
                   </a>
                   <a 
-                    href="https://linkedin.com/in/haneesh-dabbadi-ab3842271" 
+                    href="https://linkedin.com/in/haneesh-dabbadi-ab3842271"
                     className="text-light p-3 rounded-circle"
                     target="_blank" 
                     rel="noreferrer"
