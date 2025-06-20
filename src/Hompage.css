@@ -1,0 +1,13 @@
+.skillbadge{
+    background-color: #0dcaf0;
+    color: #000;
+}
+
+.skillbadge:hover{
+    background-color: #000;
+    color: #0dcaf0;
+}
+
+.scroll-section {
+  scroll-margin-top: 100px;
+}

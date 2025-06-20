@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FaBars, FaTimes, FaGithub, FaLinkedin, FaDownload, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-
+import "./Hompage.css"
 import dhoni from "./images/dhoni.jpg";
 import resume from "./images/Haneesh_Resume.pdf";
 import localsphere from "./images/localsphere.png";
@@ -131,7 +131,7 @@ function Homepage() {
       </nav>
 
       {/* Hero Section */}
-      <header ref={homeRef} className="py-5" style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', minHeight: '90vh' }}>
+      <header ref={homeRef} className="py-5 scroll-section" style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', minHeight: '90vh' }}>
         <div className="container">
           <div className="row align-items-center min-vh-75">
             <div className="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
@@ -180,7 +180,7 @@ function Homepage() {
       </header>
 
       {/* About Section */}
-      <section ref={aboutRef} className="py-5" style={{ backgroundColor: '#0f1419' }}>
+      <section ref={aboutRef} className="py-5 scroll-section" style={{ backgroundColor: '#0f1419' }}>
         <div className="container">
           <div className="row">
             <div className="col-lg-8 mx-auto text-center">
@@ -209,10 +209,8 @@ function Homepage() {
                 {skills.map((skill, index) => (
                   <span 
                     key={index}
-                    className="badge fs-6 px-3 py-2"
+                    className="skillbadge badge fs-6 px-3 py-2"
                     style={{ 
-                      backgroundColor: '#0dcaf0', 
-                      color: '#000',
                       borderRadius: '25px',
                       transition: 'transform 0.2s ease'
                     }}
@@ -229,7 +227,7 @@ function Homepage() {
       </section>
 
       {/* Experience Section */}
-      <section ref={experienceRef} className="py-5" style={{ backgroundColor: '#1a1a2e' }}>
+      <section ref={experienceRef} className="py-5 scroll-section" style={{ backgroundColor: '#1a1a2e' }}>
         <div className="container">
           <h2 className="display-5 fw-bold text-center mb-5 text-info">Experience</h2>
           
@@ -411,7 +409,7 @@ function Homepage() {
       </section>
 
       {/* Projects Section */}
-      <section ref={projectRef} className="py-5" style={{ backgroundColor: '#0f1419' }}>
+      <section ref={projectRef} className="py-5 scroll-section" style={{ backgroundColor: '#0f1419' }}>
         <div className="container">
           <h2 className="display-5 fw-bold text-center mb-5 text-info">Projects</h2>
           <div className="row g-4">
@@ -454,7 +452,7 @@ function Homepage() {
       </section>
 
       {/* Contact Section */}
-      <footer ref={contactRef} className="py-5" style={{ backgroundColor: '#1a1a2e' }}>
+      <footer ref={contactRef} className="py-5 scroll-section" style={{ backgroundColor: '#1a1a2e' }}>
         <div className="container">
           <h2 className="display-5 fw-bold text-center mb-5 text-info">Get In Touch</h2>
           <div className="row">
