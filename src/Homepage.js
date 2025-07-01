@@ -79,10 +79,12 @@ function Homepage() {
   const skills = [ "Python", "MySQL","MERN Stack", "HTML/CSS", "JAVA","UI/UX Design", "Prompt Engineering"];
 
   const experiences = [
-    { company: "Blackbuck Education Pvt Ltd", role: "MERN Stack Developer Intern", duration: "2023-2024" },
-    { company: "IIDT APSCHE", role: "VLSI Intern", duration: "2023" },
-    { company: "APSSDC", role: "Embedded Systems Intern", duration: "2022" },
-    { company: "GEETHANJALI INSTITUTE", role: "Co-Host & Organizer", duration: "2023-2024" }
+    { company: "Cognizant", role: "Java FSE Intern - Angular", duration: "April 2025 - Present" },
+    { company: "Blackbuck Engineers(in association with APSCHE)", role: "UI/UX Design Intern", duration: "January 2025 - April 2025" },
+    { company: "Blackbuck Education Pvt Ltd", role: "MERN Stack Developer Intern", duration: "May 2024 - July 2024" },
+    { company: "IIDT APSCHE", role: "VLSI Intern", duration: "June 2024 - July 2024" },
+    { company: "Geethanjali Institute of Science and Technology", role: "Co-Host & Organizer", duration: "2023-2024" },
+    { company: "APSSDC", role: "Embedded Systems Intern", duration: "2022" }
   ];
 
   return (
@@ -186,8 +188,8 @@ function Homepage() {
             <div className="col-lg-8 mx-auto text-center">
               <h2 className="display-5 fw-bold mb-4 text-info">About Me</h2>
               <p className="lead mb-4">
-                I'm a 4th-year ECE student with a passion for full stack development using the MERN stack. 
-                I bring concepts to life with clean, scalable code and modern user experiences.
+                I'm a recent B.Tech graduate (2025) in Electronics and Communication Engineering, currently interning at Cognizant.
+                Passionate about frontend development, I specialize in building responsive, intuitive, and visually appealing user interfaces.
               </p>
               <div className="mb-4">
                 <a 
