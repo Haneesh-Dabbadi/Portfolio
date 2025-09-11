@@ -8,7 +8,6 @@ Welcome to my portfolio! This is a personal website showcasing my skills, projec
 - **About**: Detailed information about my background, skills, and interests.
 - **Experience**: A list of my professional experiences and internships.
 - **Projects**: Information about notable projects, including a link to my digital voting machine project.
-- **Gallery**: A carousel showcasing various images.
 - **Contact**: Contact information and links to my social media profiles.
 
 ## Technologies Used
