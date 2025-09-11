@@ -76,10 +76,11 @@ function Homepage() {
     { img: todo, link: "https://github.com/Haneesh-Dabbadi/ToDo-List-App", title: "To-Do List App", desc: "Task management application with modern UI" }
   ];
 
-  const skills = [ "Python", "MySQL","MERN Stack", "HTML/CSS", "JAVA","UI/UX Design", "Prompt Engineering"];
+  const skills = [ "Java", "MySQL", "Java Full Stack", "MERN Stack", "HTML/CSS", "Python","UI/UX Design", "Prompt Engineering"];
 
   const experiences = [
-    { company: "Cognizant", role: "Java FSE Intern - Angular", duration: "April 2025 - Present" },
+    { company: "Cognizant", role: "Program Analyst Trainee (Full-Time)", duration: "September 2025 - Present" },
+    { company: "Cognizant", role: "Java FSE Intern - Angular", duration: "April 2025 - August 2025" },
     { company: "Blackbuck Engineers(in association with APSCHE)", role: "UI/UX Design Intern", duration: "January 2025 - April 2025" },
     { company: "Blackbuck Education Pvt Ltd", role: "MERN Stack Developer Intern", duration: "May 2024 - July 2024" },
     { company: "IIDT APSCHE", role: "VLSI Intern", duration: "June 2024 - July 2024" },
@@ -140,11 +141,11 @@ function Homepage() {
               <h1 className="display-3 fw-bold mb-4">
                 Hello, I'm <span className="text-info">Haneesh</span>
               </h1>
-              <p className="lead mb-4 text-light-emphasis">
-                Full Stack Developer specializing in MERN Stack
+              <p className="lead mb-4 text-light">
+                Program Analyst Trainee at Cognizant
               </p>
               <p className="fs-5 mb-4 text-secondary">
-                React.js | Node.js | MongoDB | Express.js
+                Java | SQL | Java Full Stack | Spring Boot | MERN Stack
               </p>
               <div className="d-flex gap-3 justify-content-center justify-content-lg-start">
                 <button 
@@ -188,8 +189,7 @@ function Homepage() {
             <div className="col-lg-8 mx-auto text-center">
               <h2 className="display-5 fw-bold mb-4 text-info">About Me</h2>
               <p className="lead mb-4">
-                I'm a recent B.Tech graduate (2025) in Electronics and Communication Engineering, currently interning at Cognizant.
-                Passionate about frontend development, I specialize in building responsive, intuitive, and visually appealing user interfaces.
+                I am a Program Analyst Trainee at Cognizant with prior experience as a Java FSE Intern. I have hands-on skills in MERN and Java Full stack, SQL and Java, and enjoy building dynamic web applications. I am passionate about learning new technologies, solving problems, and contributing to impactful projects in a collaborative environment. Committed to continuous learning and growth in technology.
               </p>
               <div className="mb-4">
                 <a 
